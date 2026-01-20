@@ -1,15 +1,41 @@
 public class Practice {
     public static void main(String[] args) {
-        Node head = new Node('g', null);
-        Node ryan = new Node('s', null);
-        head.next = ryan;
-        ryan.next = new Node('t', null);
-        ryan.next.next = new Node('x', null);
+        // Node head = new Node('g', null);
+        // Node ryan = new Node('s', null);
+        // head.next = ryan;
+        // ryan.next = new Node('t', null);
+        // ryan.next.next = new Node('x', null);
 
-        System.out.println(contains(head, 'x'));
-        System.out.println(contains(head, 'e'));
+        // System.out.println(contains(head, 'x'));
+        // System.out.println(contains(head, 'e'));
 
-        System.out.println(remove(head, 't'));
+        // System.out.println(remove(head, 't'));
+
+        MyLL<Character> list = new MyLL<>();
+
+        list.addToBack('x');
+        list.addToBack('m');
+        list.addToBack('v');
+        list.addToBack('q');
+
+        list.printList();
+
+        list.remove('m');
+        System.out.println();
+
+        list.printTail();
+        System.out.println();
+
+        //list.printList();
+        //list.printBackwards();
+
+        // MyLL<Integer> intList = new MyLL<>();
+
+        // intList.addToBack(5);
+        // intList.addToBack(99);
+        // intList.addToBack(2);
+        // intList.addToBack(-3333);
+        // intList.addToBack(66);
     }
 
     public static void printList(Node start){
